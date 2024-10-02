@@ -7,7 +7,7 @@
 
 body {
   font-family: "Montserrat", sans-serif; /* Default body font */
-  background-color: var(--off-white);
+  background-color: var(--grey-background);
 }
 
 /* Color Variables */
@@ -20,7 +20,8 @@ body {
   --f-red: #f70d1a;
   --yellow: #f0c040;
   --gold: #e1a140;
-  --light-gold: #f0d0a0;
+  --light-gold: #d4a20d;
+  --grey-background: #d3d3cd;
 }
 
 /* Headings default font */
@@ -121,11 +122,11 @@ h6,
 .cta-btn {
   padding: 12px 25px;
   background-color: var(--gold);
-  color: #000;
+  color: var(--dark-grey);
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  transition: background-color 0.3s;
+  transition: background-color ease-in 0.3s;
 }
 
 .cta-btn:hover {
@@ -136,57 +137,60 @@ h6,
 
 .wrapper {
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--grey-background);
 }
 
 .container {
-  height: 400px;
+  height: 450px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: start;
 }
 
 .card {
-  width: 80px;
+  width: 200px;
   border-radius: 75rem;
   background-size: cover;
   cursor: pointer;
   overflow: hidden;
   border-radius: 2rem;
-  margin: 0 10px;
+  margin: 15px 10px;
   display: flex;
   align-items: flex-end;
   transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
-  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.8);
+  background-color: var(--off-white);
 }
 
 .card > .row {
-  color: white;
+  color: var(--dark-grey);
   display: flex;
   flex-wrap: nowrap;
 }
 
-.card > .row > .icon {
-  background: #223;
-  color: white;
-  border-radius: 50%;
-  width: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 15px;
-}
+/* .card > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+  } */
 
 .card > .row > .description {
   display: flex;
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
-  height: 80px;
-  width: 520px;
+  height: auto;
+  width: 750px;
+  margin: 0 20px 20px 20px;
   opacity: 0;
   transform: translateY(30px);
   transition-delay: 0.3s;
@@ -194,7 +198,7 @@ h6,
 }
 
 .description p {
-  color: #fff;
+  color: var(--dark-grey);
   text-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
   padding-top: 5px;
 }
@@ -208,7 +212,7 @@ input {
 }
 
 input:checked + label {
-  width: 600px;
+  width: 800px;
 }
 
 input:checked + label .description {
@@ -218,26 +222,339 @@ input:checked + label .description {
 
 .card[for="c1"] {
   background-image: url(MBGLECoupe.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .card[for="c2"] {
   background-image: url(ToyotaGRCorolla.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .card[for="c3"] {
   background-image: url(BMWM3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .card[for="c4"] {
   background-image: url(AudiRSQ8.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
+/* Featured Vehicles Title */
 .featured-title {
-  margin-bottom: 10px;
+  margin: 0;
   text-align: center;
   font-size: 32px;
   font-weight: bold;
   color: var(--dark-grey);
+  background-color: var(--grey-background);
   text-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
   margin-top: 50px;
+}
+
+/* Featured Browse Button */
+
+.parent-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.cta-btn-ft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  padding: 12px 25px;
+  background-color: var(--gold);
+  color: var(--dark-grey);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color ease-in 0.3s;
+}
+
+.cta-btn-ft:hover {
+  background-color: var(--light-gold);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 40px;
+  text-align: center;
+}
+
+.cu-title {
+  margin: 0;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+  margin-top: 50px;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form label {
+  font-family: "Sora", sans-serif;
+  font-size: 20px;
+  margin-bottom: 5px;
+  width: 100%;
+  text-align: left;
+  color: #fff;
+}
+
+/* Text Area */
+.contact-form textarea {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  resize: none;
+  height: 50px;
+}
+
+/* Message Text Area */
+#message {
+  height: auto;
+  resize: vertical;
+  overflow: hidden;
+}
+
+#message::-webkit-resizer {
+  display: none;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: var(--gold);
+  color: var(--dark-grey);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color ease-in 0.3s;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.submit-btn:hover {
+  background-color: #d4a20d;
+}
+
+/* Parallax Background for Contact Section */
+.contact-section {
+  background-image: url("background8.jpg");
+  background-size: cover; /* Image covers section*/
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Parallax effect - image stays fixed while scrolling */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+  padding: 40px;
+  text-align: center;
+  position: relative; /* Allows other elements to be positioned correctly */
+  z-index: 1; /* Ensures the content appears above the background */
+}
+
+/* Parallax Overlay */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Light overlay for text readability */
+  z-index: -1; /* Ensure the background color is behind the content */
+}
+
+/* Footer Section */
+.footer-section {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.company-details,
+.social-media {
+  flex: 1; /* Equal width for both sections */
+  padding: 30px;
+}
+
+.company-details {
+  text-align: left;
+}
+
+.company-details p {
+  margin: 10px 0;
+}
+
+.social-media ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.social-media li {
+  margin: 10px 0;
+}
+
+.social-media a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For tablets and smaller devices (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Navbar - Stack navigation vertically */
+  .nav-links {
+    flex-direction: column; /* Stack links vertically */
+    margin-top: 20px;
+  }
+
+  .nav-links li {
+    margin-left: 0; /* Remove margin */
+    margin-top: 10px; /* Add space between items */
+  }
+
+  /* Hero Section - Reduce font sizes */
+  .hero h1 {
+    font-size: 48px; /* Smaller font */
+  }
+
+  .hero p {
+    font-size: 24px; /* Smaller font */
+  }
+
+  .cta-btn {
+    padding: 10px 20px; /* Reduce button padding */
+  }
+
+  /* Featured Cars Section - Reduce card size */
+  .card {
+    width: 150px; /* Smaller card width for mobile */
+  }
+
+  input:checked + label {
+    width: 90%; /* Reduce checked label width */
+  }
+
+  .description {
+    width: 100%; /* Make description fit the smaller screen */
+  }
+
+  /* Contact Section - Adjust form layout */
+  .contact-form {
+    max-width: 100%; /* Allow form to take full width on smaller devices */
+  }
+
+  .contact-form textarea {
+    font-size: 14px; /* Adjust font size */
+    padding: 10px;
+  }
+
+  .submit-btn {
+    padding: 10px 20px; /* Reduce padding for submit button */
+  }
+
+  /* Footer Section */
+  .footer-content {
+    flex-direction: column; /* Stack footer sections vertically */
+    text-align: center; /* Center align text */
+  }
+
+  .company-details,
+  .social-media {
+    padding: 20px;
+  }
+
+  .social-media ul {
+    padding: 0;
+  }
+}
+
+/* For mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Navbar - Make it more compact */
+  .navbar {
+    flex-direction: column; /* Stack logo and links vertically */
+    padding: 10px;
+  }
+
+  .logo {
+    margin-bottom: 20px;
+    font-size: 20px; /* Reduce logo font size */
+  }
+
+  .nav-links a {
+    font-size: 18px; /* Smaller font size for links */
+  }
+
+  /* Hero Section - Further reduce font sizes */
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  /* Featured Cars Section - Adjust for small screens */
+  .card {
+    width: 100px; /* Further reduce card width */
+  }
+
+  /* Contact Section */
+  .contact-form label {
+    font-size: 16px; /* Reduce label font size */
+  }
+
+  /* Footer Section - Align text in center */
+  .footer-section {
+    padding: 10px;
+  }
 }
